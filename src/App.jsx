@@ -1,6 +1,11 @@
 import { useState } from 'react'
 import './App.css'
-import TextPressure from './components/TextPressure'
+import Inicio from './components/Inicio'
+import Bebidas from './components/Bebidas'
+import Panaderia from './components/Panaderia'
+import Postres from './components/Postres'
+import Ubicacion from './components/Ubicacion'
+import Nosotros from './components/Nosotros'
 
 function App() {
   const [showSidebar, setShowSidebar] = useState(false)
@@ -31,7 +36,7 @@ function App() {
           {/* Logo */}
           <a href="#" className="navbar-logo">
             <span className="sr-only">homepage</span>
-            <span className="logo-text">Aca tu logo</span>
+            <img src="/cafeluna.png" alt="Cafe Luna" className="logo-image" />
           </a>
 
           {/* Search */}
@@ -89,27 +94,6 @@ function App() {
 
           <a
             href="#"
-            className={`navbar-link ${activeLink === 'panaderia' ? 'active' : ''}`}
-            onClick={(e) => {
-              e.preventDefault()
-              setActiveLink('panaderia')
-            }}
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 20 20"
-              fill="currentColor"
-              className="link-icon"
-              aria-hidden="true"
-            >
-              <path d="M10 2a3 3 0 0 0-3 3v1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V7a1 1 0 0 0-1-1V5a3 3 0 0 0-3-3Z" />
-              <path d="M13 9a1 1 0 0 1 1 1v4a3 3 0 0 1-3 3H9a3 3 0 0 1-3-3v-4a1 1 0 0 1 1-1h6Z" />
-            </svg>
-            <span>Panadería</span>
-          </a>
-
-          <a
-            href="#"
             className={`navbar-link ${activeLink === 'bebidas' ? 'active' : ''}`}
             onClick={(e) => {
               e.preventDefault()
@@ -125,11 +109,57 @@ function App() {
             >
               <path
                 fillRule="evenodd"
-                d="M10 2a1 1 0 0 1 1 1v1a1 1 0 1 1-2 0V3a1 1 0 0 1 1-1ZM5 4a3 3 0 0 1 3-3h4a3 3 0 0 1 3 3v6a3 3 0 0 1-3 3H8a3 3 0 0 1-3-3V4Zm9 10a3 3 0 0 1-3 3H9a3 3 0 0 1-3-3v-1h10v1Zm-1.5-10a1.5 1.5 0 0 0-1.5 1.5v8a1.5 1.5 0 0 0 1.5 1.5h1a1.5 1.5 0 0 0 1.5-1.5v-8A1.5 1.5 0 0 0 13.5 4h-1Z"
+                d="M10 2a3 3 0 0 0-3 3v1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V7a1 1 0 0 0-1-1V5a3 3 0 0 0-3-3ZM8 5a2 2 0 1 1 4 0v1H8V5Zm-1 3a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V9a1 1 0 0 0-1-1H7Z"
                 clipRule="evenodd"
               />
+              <path d="M7 13a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v3a3 3 0 0 1-3 3H9a3 3 0 0 1-3-3v-3Z" />
             </svg>
             <span>Bebidas</span>
+          </a>
+
+          <a
+            href="#"
+            className={`navbar-link ${activeLink === 'panaderia' ? 'active' : ''}`}
+            onClick={(e) => {
+              e.preventDefault()
+              setActiveLink('panaderia')
+            }}
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+              className="link-icon"
+              aria-hidden="true"
+            >
+              <path d="M10 2a1 1 0 0 1 1 1v1a1 1 0 1 1-2 0V3a1 1 0 0 1 1-1ZM5 4a3 3 0 0 1 3-3h4a3 3 0 0 1 3 3v6a3 3 0 0 1-3 3H8a3 3 0 0 1-3-3V4Zm9 10a3 3 0 0 1-3 3H9a3 3 0 0 1-3-3v-1h10v1Zm-1.5-10a1.5 1.5 0 0 0-1.5 1.5v8a1.5 1.5 0 0 0 1.5 1.5h1a1.5 1.5 0 0 0 1.5-1.5v-8A1.5 1.5 0 0 0 13.5 4h-1Z" />
+            </svg>
+            <span>Panadería</span>
+          </a>
+
+          <a
+            href="#"
+            className={`navbar-link ${activeLink === 'postres' ? 'active' : ''}`}
+            onClick={(e) => {
+              e.preventDefault()
+              setActiveLink('postres')
+            }}
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+              className="link-icon"
+              aria-hidden="true"
+            >
+              <path
+                fillRule="evenodd"
+                d="M10 2a3 3 0 0 0-3 3v1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V7a1 1 0 0 0-1-1V5a3 3 0 0 0-3-3ZM8 5a2 2 0 1 1 4 0v1H8V5Zm-1 3a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V9a1 1 0 0 0-1-1H7Z"
+                clipRule="evenodd"
+              />
+              <path d="M7 13a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v3a3 3 0 0 1-3 3H9a3 3 0 0 1-3-3v-3Z" />
+            </svg>
+            <span>Postres</span>
           </a>
 
           <a
@@ -185,59 +215,12 @@ function App() {
 
       {/* Main Content */}
       <div id="main-content" className="main-content">
-        {activeLink === 'inicio' && (
-          <>
-            <div style={{ position: 'relative', height: '300px', marginTop: '2rem' }}>
-              <TextPressure
-                text="Bienvenido!"
-                flex={true}
-                alpha={false}
-                stroke={false}
-                width={true}
-                weight={true}
-                italic={true}
-                textColor="#6b4e3d"
-                strokeColor="#d4a5a5"
-                minFontSize={36}
-              />
-            </div>
-
-            {/* Cards Section */}
-            <div className="cards-container">
-              <div className="info-card">
-                <div className="card-icon">🍞</div>
-                <h3 className="card-title">Panadería Fresca</h3>
-                <p className="card-description">
-                  Pan recién horneado todos los días con ingredientes de la más alta calidad
-                </p>
-              </div>
-
-              <div className="info-card">
-                <div className="card-icon">☕</div>
-                <h3 className="card-title">Café Artesanal</h3>
-                <p className="card-description">
-                  Granos seleccionados y tostados a la perfección para el mejor sabor
-                </p>
-              </div>
-
-              <div className="info-card">
-                <div className="card-icon">🍰</div>
-                <h3 className="card-title">Postres Caseros</h3>
-                <p className="card-description">
-                  Deliciosos postres hechos con amor y recetas tradicionales
-                </p>
-              </div>
-
-              <div className="info-card">
-                <div className="card-icon">🌿</div>
-                <h3 className="card-title">Ambiente Acogedor</h3>
-                <p className="card-description">
-                  Un espacio cálido y relajante para disfrutar de tus momentos especiales
-                </p>
-              </div>
-            </div>
-          </>
-        )}
+        {activeLink === 'inicio' && <Inicio />}
+        {activeLink === 'bebidas' && <Bebidas />}
+        {activeLink === 'panaderia' && <Panaderia />}
+        {activeLink === 'postres' && <Postres />}
+        {activeLink === 'ubicacion' && <Ubicacion />}
+        {activeLink === 'nosotros' && <Nosotros />}
       </div>
 
       {/* Toggle button for small screen */}
