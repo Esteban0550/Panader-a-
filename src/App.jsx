@@ -34,7 +34,15 @@ function App() {
       >
         <div className="navbar-content">
           {/* Logo */}
-          <a href="#" className="navbar-logo">
+          <a 
+            href="#" 
+            className="navbar-logo"
+            onClick={(e) => {
+              e.preventDefault()
+              setActiveLink('inicio')
+              setShowSidebar(false)
+            }}
+          >
             <span className="sr-only">homepage</span>
             <img src="/cafeluna.png" alt="Cafe Luna" className="logo-image" />
           </a>
@@ -73,6 +81,7 @@ function App() {
             onClick={(e) => {
               e.preventDefault()
               setActiveLink('inicio')
+              setShowSidebar(false)
             }}
           >
             <svg
@@ -98,6 +107,7 @@ function App() {
             onClick={(e) => {
               e.preventDefault()
               setActiveLink('bebidas')
+              setShowSidebar(false)
             }}
           >
             <svg
@@ -123,6 +133,7 @@ function App() {
             onClick={(e) => {
               e.preventDefault()
               setActiveLink('panaderia')
+              setShowSidebar(false)
             }}
           >
             <svg
@@ -143,6 +154,7 @@ function App() {
             onClick={(e) => {
               e.preventDefault()
               setActiveLink('postres')
+              setShowSidebar(false)
             }}
           >
             <svg
@@ -168,6 +180,7 @@ function App() {
             onClick={(e) => {
               e.preventDefault()
               setActiveLink('ubicacion')
+              setShowSidebar(false)
             }}
           >
             <svg
@@ -192,6 +205,7 @@ function App() {
             onClick={(e) => {
               e.preventDefault()
               setActiveLink('nosotros')
+              setShowSidebar(false)
             }}
           >
             <svg
